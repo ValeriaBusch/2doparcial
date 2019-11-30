@@ -11,10 +11,9 @@ namespace UnitTest
         public void TestUnitarioAHORRO()
         {
             //Organizar
-            string Nombre = "TestUnitarioAHORRO";
             double Monto= 500;
-            double Montoutilizado = 400;
-            double valoresperado = 100;
+            double Montoutilizado = 100;
+            double valoresperado = 600;
             Company ObjetoPrueba = new Company("HOLA", Monto);
 
             //Actuar
@@ -25,22 +24,23 @@ namespace UnitTest
             double valorresultado = ObjetoPrueba.SaveProject;
             Assert.AreEqual(valoresperado, valorresultado);
         }
+        [TestMethod]
         public void TestUnitarioNombre()
         {
             //Organizar
             string NombreInicial = "Busch";
             string NombreNuevo = "Valeria";
             string valoresperado = "Valeria";
-            Company person = new Company(NombreInicial, 100);
+            Company persona = new Company(NombreInicial, 100);
 
             //Actuar
 
-            person.ChangeName(NombreNuevo);
+            persona.ChangeName(NombreNuevo);
 
             //Afirmar
-            string valorresultado = person.Name;
+            string valorresultado = persona.Name;
             Assert.AreEqual(valoresperado, valorresultado);
         }
     }
 }
-}
+
